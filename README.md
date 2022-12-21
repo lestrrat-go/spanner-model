@@ -48,9 +48,9 @@ func (Example) Columns() []format.Column {
 func (Example) PrimaryKey() *model.PrimaryKeySpec {
   return &model.PrimaryKeySpec{
     Columns: []string{
-      `Foo`,
-      `Bar`,
-      `Baz`,
+      model.NewPrimaryKeyColumn(`Foo`, 1024),
+      model.NewPrimaryKeyColumn(`Bar`, 1024),
+      model.NewPrimaryKeyColumn(`Baz`, 1024),
     },
   }
 }
